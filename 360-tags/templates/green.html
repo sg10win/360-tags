@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tag</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <!--<link rel="stylesheet" href="login.css">-->
+        <link rel="stylesheet" type="text/css" href="../static/login.css">
+        <link rel="stylesheet" type="text/css" href="../static/nevbar.css">
+        <link href="{{ url_for('static',path='login.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', path='nevbar.css') }}" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+
+
+
+    
+
+
+        <div class="topnav">
+            <a href="/home">Home</a>
+            <a class="active" href="/tag">Tag</a>
+            <a href="/about">About</a>
+
+        </div>
+
+        <link rel="stylesheet" type="text/css" href="../static/bootstrap2.css">
+
+         <link rel="stylesheet" type="text/css" href="../static/login.css">
+        <link rel="stylesheet" type="text/css" href="../static/nevbar.css">
+
+
+        <div class="Shit">
+        <form class="login-form" action="" method="POST" autocomplete="off">
+<!--            <div class="login-form">-->
+                <div class="login-form__logo-container">
+<!--                    <img class="login-form__logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9B4szbSdhBnoPDgs2W22ppz6JnfqZcm5idQ&usqp=CAU" alt="Logo">-->
+                </div>
+
+                <div class="login-form__content">
+                    <div class="login-form__header" id="new tag">New Tag</div>
+
+
+                    <input id="id_1" class="login-form__input" type="text" name="id_1" placeholder="ID_1">
+                    <input id="id_2" class="login-form__input" type="text" name="id_2" placeholder="ID_2">
+                    <input id="id_3" class="login-form__input" type="text" name="id_3" placeholder="ID_3">
+                    <select id="id_4" class="login-form__input" name="id_4"></select>
+                    <input id=percent class="pre-form__input" type="text" name="percent" placeholder="%">
+                    <select class="select" name="select" id="select">
+
+
+<!--                        <option disabled selected>Select</option>-->
+<!--                        <option value={{value}}>{{value}}</option>-->
+<!--                        <option value="up_1">up_1</option>-->
+<!--                        <option value="up_2">up_2</option>-->
+<!--                        <option value="up_3">up_3</option>-->
+<!--                        <option value="up_4">up_4</option>-->
+<!--                        <option value="up_5">up_5</option>-->
+                    </select>
+
+
+                    <label class="switch">
+                    <input type="checkbox" name="switch" id="switch" onclick="myFunction()">
+                    <span class="slider round"></span>
+                    </label>
+
+
+                    <p id="text" style="display:none">Checkbox is CHECKED!</p>
+
+
+
+                    <button class="remove-login-form__button"
+                            type="submit" value="clean" name="pressed_btn">Clean</button>
+
+
+
+                    <input class="login-form__button"
+                            type="submit" id="add-btn" value="add" name="pressed_btn"/>
+
+                    <button class="upload-form__button" type="submit" id='upload-btn' value="upload" name="pressed_btn">Upload</button>
+
+                    <div class="login-form__links">
+                        <a class="login-form__link" href="./">Help?</a>
+                    </div>
+
+                </div>
+
+<!--                </div>-->
+        </form>
+            <script src="{{ url_for('scripts', path='tag.js') }}"></script>
+
+            <div id="fixing-flex-div" class="fixing-flex"></div>
+            {% if length %}
+            {% for i in range(length) %}
+            <script>
+                editTime("{{data_id_1[i]}}", "{{data_id_2[i]}}", "{{data_id_3[i]}}", "{{data_id_4[i]}}", "{{data_percent[i]}}", "{{data_select[i]}}");
+            </script>
+            {% endfor %}
+            {% endif%}
+
+
+
+        </div>
+        <style>#sidebox{
+                padding: 30px;
+                margin-top: 10px;
+                margin-left: 800px;
+
+            }</style>
+
+<!--    <script src="../scripts/tag.js"></script>-->
+<!---->
+    </body>
+</html>
