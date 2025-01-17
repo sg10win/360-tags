@@ -1,5 +1,6 @@
 # 360-tags
-**Simple Data Tag Interface
+
+**Simple Data Tag Interface**
 
 This is a simple web interface built with FastAPI for managing data tags. It allows users to:
 
