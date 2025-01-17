@@ -11,7 +11,7 @@ This is a simple web interface built with FastAPI for managing data tags. It all
 - **Insert Tag**: Add a new tag by providing a name.
 - **Delete Tag**: Remove a tag by its unique ID.
   
-##Screenshots of the app**
+## Screenshots
 
 ![Screenshot of the app](https://github.com/sg10win/360-tags/blob/main/360-tags/imgs/360-tags2.PNG)
 
